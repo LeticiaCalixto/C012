@@ -7,6 +7,7 @@ Aplicação que simula uma corrida de naves utilizando o conceito de threads. <b
 O ganhador é o primeiro que passar por todos as estrelas e passar na linha de chegada.
 
 - Cada passagem por uma estrela é simbolizada por um print com o nome da nave.
+- Ao chegar em cada estrela, a nave espera 0.5s para prosseguir para a proxima.
 - No percurso, havará 5 estrelas.
 - Todos as naves começam no mesmo instante.
 
