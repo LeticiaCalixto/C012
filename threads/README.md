@@ -16,7 +16,7 @@ As Threads são executas todas no mesmo instante. Assim, temos a garantia que to
 
 
 ## Running
-A IDE fica a escolha do usuário. Para executar use ```run main.py``` na pasta raíz do projeto.
+A IDE fica a escolha do usuário. Para executar use ```python3 main.py``` na pasta raíz do projeto.
 
 
 ## Sobre
