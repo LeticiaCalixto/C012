@@ -24,5 +24,5 @@ Trabalho desenvolvido para a disciplina de Sistemas Operacionais do curso de Eng
 
 
 ## Autores
-<a href="https://github.com/LeticiaCalixto">Letícia Calixto</a>
-<a href="https://github.com/marinabribeiro">Marina Ribeiro/a>
+<a href="https://github.com/LeticiaCalixto"> - Letícia Calixto</a> <br>
+<a href="https://github.com/marinabribeiro"> - Marina Ribeiro</a>
