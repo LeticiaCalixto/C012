@@ -10,37 +10,35 @@ for x in range(0, n):
 alg = input ("Escolha: \n 1 - FIFO \n 2 - RR \n ----->  ")
 
 def fifo ():
-	entradas = list(tempoEntrada)
-	tempos = list(tempoExecucao)
-	for j in range(0,n): 
-		for i in range(0,n-1):
-			if entradas[i]>entradas[i+1]:
-				Aux = entradas[i+1] 
-				entradas[i+1] = entradas[i]
-				entradas[i] = Aux
-				Aux = tempos[i+1] 
-				tempos[i+1] = tempos[i]
-				tempos[i] = Aux
+	tEntrada = list(tempoEntrada)
+	tExecucao = list(tempoExecucao)
+	for i in range(0,n-1):
+		if tEntrada[i]>tEntrada[i+1]:
+			aux = tEntrada[i+1] 
+			tEntrada[i+1] = tEntrada[i]
+			tEntrada[i] = aux
+			aux = tExecucao[i+1] 
+			tExecucao[i+1] = tExecucao[i]
+			tExecucao[i] = aux
 	soma = 0
 	relogio = 0
 	for x in range(0,n):
-		relogio += tempos[x] 
-		soma += relogio - entradas[x] 
+		relogio += tExecucao[x] 
+		soma += relogio - tEntrada[x] 
 		pass
 	return float(soma/n);
 
 def rr ():
-	entradas = list(tempoEntrada) 
-	tempos = list(tempoExecucao) 
+	tEntrada = list(tempoEntrada) 
+	tExecucao = list(tempoExecucao) 
 	relogio = 0 
 	processados = [0]*n  
 	entraram = [0]*n  
 	fila = [] 
-	count = 0 
 	soma = 0
 	def entra():
 		for x in range(0,n): 
-			if entradas[x] <= relogio and entraram[x] == 0:
+			if tEntrada[x] <= relogio and entraram[x] == 0:
 				
 				entraram[x] = 1  
 				fila.append(x)  
@@ -48,7 +46,7 @@ def rr ():
 	entra()
 	for processo in fila:
 		
-		falta = tempos[processo]-processados[processo]  
+		falta = tExecucao[processo]-processados[processo]  
 		if falta > quantum: 
 			relogio+=quantum  
 			entra() 
@@ -59,7 +57,7 @@ def rr ():
 			relogio+=falta 
 			entra() 
 			processados[processo]+=falta 
-			soma+=relogio-entradas[processo] 
+			soma+=relogio-tEntrada[processo] 
 	return float(soma/n) 
 
 while alg != 0:
