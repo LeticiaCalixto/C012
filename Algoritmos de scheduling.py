@@ -3,11 +3,13 @@ tempoExecucao = []
 tempoEntrada = []
 
 for x in range(0, n):
+    print('\n')
     print("Processo ", x, ":")
-    tempoEntrada.append(float(input("    Tempo de entrada: ")))
-    tempoExecucao.append(float(input("    Tempo de execucao:")))
-    
-alg = input ("Escolha: \n 1 - FIFO \n 2 - RR \n ----->  ")
+    # print ("Tempo de entrada: ")
+    # tempoEntrada.append(float(input()))
+    tempoEntrada = float(input ("Tempo de entrada: "))
+    print ("Tempo de EXECUCAO do processo ", x, ": ")
+    tempoExecucao.append(float(input()))
 
 def fifo ():
 	entradas = list(tempoEntrada)
@@ -61,6 +63,8 @@ def rr ():
 			processados[processo]+=falta 
 			soma+=relogio-entradas[processo] 
 	return float(soma/n) 
+
+alg = input ("Escolha: \n 1 - FIFO \n 2 - RR \n ----->  ")
 
 while alg != 0:
 	if alg == '1':
